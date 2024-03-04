@@ -1,0 +1,25 @@
+Program.Sub.ScreenSU.Start
+Program.Sub.ScreenSU.End
+
+Program.Sub.Preflight.Start
+
+Program.Sub.Preflight.End
+
+Program.Sub.Main.Start
+' Originally for SPS Processing
+' JSO
+' 7/2/2010
+' Hook 12410 (script 1 button on Order Lines)
+
+Variable.local.sPart.Declare(String)
+Variable.Local.iMode.Declare(Long)
+Variable.Local.sParams.Declare(String)
+
+Variable.local.sPart.set(Variable.Passed.000052)
+Variable.Local.iMode.Set(400000)
+Function.Intrinsic.String.Concat("L","!*!",V.Local.sPart,V.Local.sParams)
+Function.Global.General.CallWrapperAsync(V.local.iMode,V.Local.sParams)
+
+Program.Sub.Main.End
+
+
