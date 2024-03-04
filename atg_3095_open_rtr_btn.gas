@@ -1,0 +1,19 @@
+Program.Sub.ScreenSU.Start
+Program.Sub.ScreenSU.End
+
+Program.Sub.Preflight.Start
+
+Program.Sub.Preflight.End
+
+Program.Sub.Main.Start
+' Originally for SPS Processing
+' JSO
+' 7/2/2010
+' Hook 12010 (populate on order lines)
+
+Variable.Passed.000162.Set("Open Router")
+
+
+Program.Sub.Main.End
+
+
